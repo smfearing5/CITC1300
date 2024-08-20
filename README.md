@@ -1,2 +1,1 @@
-# CITC1300
-Beginning HTML and CSS
+# CITC 1300 Project Page
