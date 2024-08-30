@@ -1,0 +1,116 @@
+/* Positioning */
+body {
+    margin: 0;
+}
+header,
+footer {
+    width: 100%;
+}
+nav {
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+#nav_box {
+    width: 35%;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-around;
+}
+#nav_box>a {
+    width: 8rem;
+    text-align: center;
+}
+footer {
+    padding: 0.5rem;
+    text-align: center;
+}
+footer.p {
+    height: 100%;
+    padding: auto;
+}
+main {
+    padding: 1rem;
+    display: block;
+    width: 80%;
+    margin: 1rem auto;
+}
+h1 {
+    margin: auto;
+    padding: 1rem;
+}
+h1, h3 {
+    text-align: center;
+}
+div.card {
+    margin: 2rem 1rem;
+    border: 2px solid black;
+}
+div.box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+div.info {
+    display: block;
+    width: 45%;
+}
+img {
+    display: block;
+    padding: 1rem;
+    width: 25%;
+    height: fit-content;
+}
+div.img_link_box {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+div.img_link_box>img {
+    width: 90%;
+}
+
+/* Colors */
+header,
+nav,
+footer {
+    background-color: limegreen;
+}
+body {
+    background-color: black;
+}
+#home_main {
+    background-color: palegreen;
+}
+#vc_card,
+#vc_main {
+    background-color: cyan;
+}
+#bearodactyl_card {
+    background-color: burlywood;
+}
+#rainforest_vc_card {
+    background-color: limegreen;
+}
+#giant_vc_card {
+    background-color: forestgreen;
+}
+#swamp_vc_card {
+    background-color: olive;
+}
+#coastal_vc_card {
+    background-color: tan;
+}
+#deepsea_vc_card {
+    background-color: blue;
+    color: orange;
+}
+a.blue_card:link {
+    color: yellow;
+}
+a.blue_card:visited {
+    color: red;
+}
