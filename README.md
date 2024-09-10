@@ -7,4 +7,7 @@
     <li>
         <a href="HTML5_and_CSS/index.html" target="_blank">HTML5 and intro to CSS</a>
     </li>
+    <li>
+        <a href="Advanced_CSS/index.html" target="_blank">Advanced CSS</a>
+    </li>
 </ul>

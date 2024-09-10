@@ -1,0 +1,46 @@
+/* Colors */
+header,
+nav,
+footer {
+    background-color: limegreen;
+}
+body {
+    background-color: black;
+}
+#home_main {
+    background-color: palegreen;
+}
+#vc_card, 
+#vc_main {
+    background-color: cyan;
+}
+#bd_card,
+#bd_main {
+    background-color: burlywood;
+}
+#bd_col1,
+#bd_col2 {
+    background-color: skyblue;
+}
+#rainforest_vc_card {
+    background-color: limegreen;
+}
+#giant_vc_card {
+    background-color: forestgreen;
+}
+#swamp_vc_card {
+    background-color: olive;
+}
+#coastal_vc_card {
+    background-color: tan;
+}
+#deepsea_vc_card {
+    background-color: blue;
+    color: orange;
+}
+a.blue_card:link {
+    color: yellow;
+}
+a.blue_card:visited {
+    color: red;
+}
