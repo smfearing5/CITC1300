@@ -1,0 +1,8 @@
+.small_section,
+.subsection {
+    border: 2px solid black;
+}
+
+.nav-link:hover {
+    background-color: #7777FF;
+}

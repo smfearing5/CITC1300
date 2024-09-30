@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html id="html" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- imported CSS / JS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <!-- my CSS / JS -->
+    <link rel="icon" type="image/png" href="images/favicons/cyterraclops.png">
+    <link rel="stylesheet" href="styles/positioning.css">
+    <link rel="stylesheet" href="styles/colors.css">
+    <script defer src="script.js"></script>
+
+    <title>AI Image Generation</title>
+</head>
+<body class="bg-body-tertiary">
+    <nav class="navbar sticky-top navbar-expand-lg bg-primary-subtle">
+        <div class="container-fluid">
+            <a href="index.html" class="navbar-brand">AI ART</a>
+            <button class="navbar-toggler" 
+                type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#navbarSupportedContent" 
+                aria-controls="navbarSupportedContent" 
+                aria-expanded="false" 
+                aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="image.html">Image Generation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="music.html">Music Generation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="video.html">Video Generation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="legal.html">Legal Issues</a></li>
+                </ul>
+            </div>
+            <!-- end of navbarSupportedContent -->
+            <div>
+                <input id="colorToggle" class="checkbox" type="checkbox">
+                <label for="colorToggle" class="checkbox-label">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <span class="ball"></span>
+                </label>
+            </div>
+        </div>
+        <!-- end of container-fluid -->
+    </nav>
+    <header class="bg-body-tertiary">
+        <h1>AI Image Generation</h1>
+    </header>
+    <main class="bg-body-tertiary">
+        <section class="small_section bg-body-secondary">
+            <h2>Introduction</h2>
+            <p>
+                Here, you'll discover the incredible potential of artificial intelligence to create stunning, unique, and often mind-bending images. From abstract landscapes to photorealistic portraits, AI is pushing the boundaries of what's possible in the realm of visual art.
+            </p>
+        </section>
+        <section class="small_section bg-body-secondary">
+            <h2>How Does It Work?</h2>
+            <p>
+                AI image generation algorithms are trained on massive datasets of images. They learn to recognize patterns, styles, and features, allowing them to generate new images that are similar or different to the ones they've been trained on.
+            </p>
+        </section>
+        <section class="small_section bg-body-secondary">
+            <h2>Applications of AI Image Generation</h2>
+            <p>AI-generated images are used in a variety of fields, including:</p>
+            <ul>
+                <li>Creative Arts: Artists and designers are using AI to explore new creative avenues.</li>
+                <li>Gaming: AI-generated assets can be used to create more immersive gaming experiences.</li>
+                <li>Advertising: AI can be used to generate unique and attention-grabbing visuals.</li>
+                <li>Scientific Research: AI-generated images can aid in scientific visualization and analysis.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Popular AI Art Tools</h2>
+            <div id="image_page_subsection_box">
+                <div class="subsection bg-body-secondary" id="midjourney_subsection">
+                    <h3>Midjourney</h3>
+                    <div id="midjourney_carousel"
+                    class="carousel slide carousel-fade flex_carousel" 
+                    data-bs-ride="carousel" 
+                    data-bs-interval=8000>
+                        <div class="carousel-inner image_page_carousel">
+                            <div class="carousel-indicators">
+                                <button type="button"
+                                class="active"
+                                data-bs-target="#midjourney_carousel"
+                                data-bs-slide-to="0"
+                                aria-current="true"
+                                aria-label="Slide 1">
+                                </button>
+                                <button type="button"
+                                data-bs-target="#midjourney_carousel"
+                                data-bs-slide-to="1"
+                                aria-label="Slide 2">
+                                </button>
+                                <button type="button"
+                                data-bs-target="#midjourney_carousel"
+                                data-bs-slide-to="2"
+                                aria-label="Slide 3">
+                                </button>
+                                <button type="button"
+                                data-bs-target="#midjourney_carousel"
+                                data-bs-slide-to="3"
+                                aria-label="Slide 4">
+                                </button>
+                            </div>
+                            <!-- end of carousel-indicators -->
+                            <!-- carousel-items -->
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" 
+                                    src="images/midjourney/cyterraclops.png" 
+                                    alt="Midjourney Cyterraclops">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" 
+                                    src="images/midjourney/blue_chicken.jpeg" 
+                                    alt="Midjourney Blue Chicken">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" 
+                                    src="images/midjourney/robocat.png" 
+                                    alt="Midjourney Robocat">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" 
+                                    src="images/midjourney/armored_penguin.png" 
+                                    alt="Midjourney Armored Penguin">
+                            </div>
+                            <!-- carousel buttons -->
+                            <button id="midPrevBtn"
+                                class="carousel-control-prev" 
+                                type="button" 
+                                data-bs-target="#midjourney_carousel" 
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button id="midNextBtn"
+                                class="carousel-control-next" 
+                                type="button" 
+                                data-bs-target="#midjourney_carousel" 
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <!-- end of carousel-inner -->
+                    </div>
+                    <!-- end of midjourney_carousel -->
+                    <p>
+                        Midjourney is a powerful AI platform that has revolutionized the world of digital art. By using advanced deep learning algorithms, Midjourney can generate stunning, high-resolution images based on text prompts. Simply describe the image you want, and Midjourney will create several unique interpretations.
+                    </p>
+                    <p>Key features and capabilities of Midjourney include:</p>
+                    <ul>
+                        <li>
+                            Text-to-image generation: Create images from detailed text descriptions.
+                        </li>
+                        <li>
+                            Image variation: Generate multiple variations of an image to find the perfect fit.
+                        </li>
+                        <li>
+                            Upscaling: Increase the resolution of your images for high-quality prints.
+                        </li>
+                        <li>
+                            Style transfer: Apply the style of one image to another.
+                        </li>
+                        <li>
+                            Community-driven: Connect with other artists and share your creations.
+                        </li>
+                    </ul>
+                    <p>
+                        With Midjourney, the possibilities are endless. Whether you're a professional artist, a hobbyist, or simply curious about AI, Midjourney offers a unique and exciting way to explore the world of digital art.
+                    </p>
+                </div>
+                <!-- end of Midjourny subsection -->
+                <div class="subsection bg-body-secondary" id="gemini_subsection">
+                    <h3>Google Gemini</h3>
+                    <div id="gemini_carousel"
+                    class="carousel slide carousel-fade flex_carousel" 
+                    data-bs-ride="carousel" 
+                    data-bs-interval=8000>
+                        <div class="carousel-inner image_page_carousel">
+                            <div class="carousel-indicators">
+                                <button type="button"
+                                class="active"
+                                data-bs-target="#gemini_carousel"
+                                data-bs-slide-to="0"
+                                aria-current="true"
+                                aria-label="Slide 1">
+                                </button>
+                                <button type="button"
+                                data-bs-target="#gemini_carousel"
+                                data-bs-slide-to="1"
+                                aria-label="Slide 2">
+                                </button>
+                                <button type="button"
+                                data-bs-target="#gemini_carousel"
+                                data-bs-slide-to="2"
+                                aria-label="Slide 3">
+                                </button>
+                                <button type="button"
+                                data-bs-target="#gemini_carousel"
+                                data-bs-slide-to="3"
+                                aria-label="Slide 4">
+                                </button>
+                            </div>
+                            <!-- end of carousel-indicators -->
+                            <!-- carousel-items -->
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" 
+                                    src="images/gemini/velobster_crabtor.png" 
+                                    alt="Google Gemini Velobster Crabtor">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" 
+                                    src="images/gemini/bearodactyl.png" 
+                                    alt="Google Gemini Bearodactyl">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" 
+                                    src="images/gemini/broncosorse.jpg" 
+                                    alt="Google Gemini Broncosorse">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" 
+                                    src="images/gemini/stegofowl.jpg" 
+                                    alt="Google Gemini Stegofowl">
+                            </div>
+                            <!-- carousel buttons -->
+                            <button id="midPrevBtn"
+                                class="carousel-control-prev" 
+                                type="button" 
+                                data-bs-target="#gemini_carousel" 
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button id="midNextBtn"
+                                class="carousel-control-next" 
+                                type="button" 
+                                data-bs-target="#gemini_carousel" 
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <!-- end of carousel-inner -->
+                    </div>
+                    <!-- end of gemini_carousel -->
+                    <p>
+                        Discover the limitless possibilities of AI-generated art with Google Gemini. This cutting-edge language model is revolutionizing the creative landscape by generating stunning, original images based on your textual descriptions. With Gemini, you can explore a vast array of artistic styles, from photorealistic to abstract, and bring your wildest imaginations to life.
+                    </p>
+                    <p>Key Features:</p>
+                    <ul>
+                        <li>
+                            Unparalleled Creativity: Gemini's advanced algorithms enable it to produce highly detailed and visually appealing images that capture the essence of your prompts.
+                        </li>
+                        <li>
+                            Diverse Styles: Explore a wide range of artistic styles, from classic to contemporary, and find the perfect match for your vision.
+                        </li>
+                        <li>
+                            Customization: Fine-tune your creations by adjusting parameters such as color palette, composition, and level of detail.
+                        </li>
+                        <li>
+                            Endless Possibilities: The only limit is your imagination. From fantastical landscapes to surreal portraits, Gemini can bring your ideas to life.
+                        </li>
+                    </ul>
+                </div>
+                <!-- end of Gemini subsection -->
+                <div class="subsection bg-body-secondary" id="dalle_subsection">
+                    <h3>DALLE.3</h3>
+                    <div id="dalle_carousel"
+                    class="carousel slide carousel-fade flex_carousel" 
+                    data-bs-ride="carousel" 
+                    data-bs-interval=8000>
+                        <div class="carousel-inner image_page_carousel">
+                            <div class="carousel-indicators">
+                                <button type="button"
+                                class="active"
+                                data-bs-target="#dalle_carousel"
+                                data-bs-slide-to="0"
+                                aria-current="true"
+                                aria-label="Slide 1">
+                                </button>
+                                <button type="button"
+                                data-bs-target="#dalle_carousel"
+                                data-bs-slide-to="1"
+                                aria-label="Slide 2">
+                                </button>
+                                <button type="button"
+                                data-bs-target="#dalle_carousel"
+                                data-bs-slide-to="2"
+                                aria-label="Slide 3">
+                                </button>
+                                <button type="button"
+                                data-bs-target="#dalle_carousel"
+                                data-bs-slide-to="3"
+                                aria-label="Slide 4">
+                                </button>
+                            </div>
+                            <!-- end of carousel-indicators -->
+                            <!-- carousel-items -->
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" 
+                                    src="images/dalle/dragonball.jpeg" 
+                                    alt="DALLE.3 Dragonball">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" 
+                                    src="images/dalle/sky_kingdom.jpeg" 
+                                    alt="DALLE.3 Sky Kingdom">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" 
+                                    src="images/dalle/white_tiger_cub.jpeg" 
+                                    alt="DALLE.3 White Tiger Cub">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" 
+                                    src="images/dalle/space_gators.png" 
+                                    alt="DALLE.3 Space Gators">
+                            </div>
+                            <!-- carousel buttons -->
+                            <button id="midPrevBtn"
+                                class="carousel-control-prev" 
+                                type="button" 
+                                data-bs-target="#dalle_carousel" 
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button id="midNextBtn"
+                                class="carousel-control-next" 
+                                type="button" 
+                                data-bs-target="#dalle_carousel" 
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <!-- end of carousel-inner -->
+                    </div>
+                    <!-- end of dalle_carousel -->
+                    <p>
+                        DALL.E 3 is a revolutionary AI model developed by OpenAI that can generate highly realistic and detailed images from simple text descriptions. It's a significant advancement in the field of generative AI, capable of producing images that are often indistinguishable from those created by human artists.
+                    </p>
+                    <p>Key features and capabilities of DALL.E 3 include:</p>
+                    <ul>
+                        <li>
+                            High-resolution images: DALL.E 3 can generate images in high resolution, making them suitable for various applications like print, digital media, and even physical products.
+                        </li>
+                        <li>
+                            Versatility: The model can generate images in a wide range of styles, from photorealistic to abstract, and can even incorporate specific elements like objects, scenes, or even artistic techniques.
+                        </li>
+                        <li>
+                            Customization: Users can provide detailed prompts to guide the AI in creating images that align closely with their desired concepts or aesthetic preferences.
+                        </li>
+                    </ul>
+                    <p>Why is it important that DALL.E 3 was developed by OpenAI?</p>
+                    <ul>
+                        <li>
+                            Ethical considerations: OpenAI has a strong commitment to developing AI responsibly and ethically. This includes addressing potential biases, ensuring transparency, and mitigating risks associated with misuse of AI technology.
+                        </li>
+                        <li>
+                            Accessibility: OpenAI's focus on democratizing AI means that DALL.E 3 is accessible to a wider audience, empowering artists, designers, and researchers to explore new creative possibilities.
+                        </li>
+                        <li>
+                            Research and development: As a leading research organization, OpenAI's development of DALL.E 3 contributes to the advancement of AI technology and fuels innovation in various fields.
+                        </li>
+                    </ul>
+                </div>
+                <!-- end of DALLE.3 subsection -->
+                <div class="subsection bg-body-secondary" id="sd_subsection">
+                    <h3>Stable Diffusion</h3>
+                    <div id="sd_carousel"
+                    class="carousel slide carousel-fade flex_carousel" 
+                    data-bs-ride="carousel" 
+                    data-bs-interval=8000>
+                        <div class="carousel-inner image_page_carousel">
+                            <div class="carousel-indicators">
+                                <button type="button"
+                                class="active"
+                                data-bs-target="#sd_carousel"
+                                data-bs-slide-to="0"
+                                aria-current="true"
+                                aria-label="Slide 1">
+                                </button>
+                                <button type="button"
+                                data-bs-target="#sd_carousel"
+                                data-bs-slide-to="1"
+                                aria-label="Slide 2">
+                                </button>
+                                <button type="button"
+                                data-bs-target="#sd_carousel"
+                                data-bs-slide-to="2"
+                                aria-label="Slide 3">
+                                </button>
+                                <button type="button"
+                                data-bs-target="#sd_carousel"
+                                data-bs-slide-to="3"
+                                aria-label="Slide 4">
+                                </button>
+                            </div>
+                            <!-- end of carousel-indicators -->
+                            <!-- carousel-items -->
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" 
+                                    src="images/stable_diffusion/ships.jpeg" 
+                                    alt="Stable Diffusion Ships">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" 
+                                    src="images/stable_diffusion/close_encounter.jpeg" 
+                                    alt="Stable Diffusion Close Encounter">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" 
+                                    src="images/stable_diffusion/spiral_village.jpeg" 
+                                    alt="Stable Diffusion Spiral Village">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" 
+                                    src="images/stable_diffusion/cityscape.jpeg" 
+                                    alt="Stable Diffusion Cityscape">
+                            </div>
+                            <!-- carousel buttons -->
+                            <button id="sdPrevBtn"
+                                class="carousel-control-prev" 
+                                type="button" 
+                                data-bs-target="#sd_carousel" 
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button id="sdNextBtn"
+                                class="carousel-control-next" 
+                                type="button" 
+                                data-bs-target="#sd_carousel" 
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <!-- end of carousel-inner -->
+                    </div>
+                    <!-- end of sd_carousel -->
+                    <p>
+                        Stable Diffusion is an open source deep learning model capable of generating high-quality images from text descriptions. It's a groundbreaking advancement in the field of artificial intelligence, allowing users to create unique and visually stunning images with unprecedented ease.
+                    </p>
+                    <p>
+                        How does it work? Stable Diffusion uses a process called latent diffusion, which involves starting with a random image and gradually adding details based on the provided text prompt. The model is trained on a massive dataset of images and text pairs, learning to associate specific words and phrases with visual elements.
+                    </p>
+                    <p>
+                        Why is open-source important? The open-source nature of Stable Diffusion is a critical factor in its success. By being publicly available, it allows researchers, artists, and developers worldwide to:
+                    </p>
+                    <ul>
+                        <li>
+                            Experiment and innovate: Researchers can delve into the model's inner workings, understanding its strengths and limitations. Artists can explore new creative possibilities, pushing the boundaries of what AI can generate. Developers can integrate Stable Diffusion into their own applications, creating personalized AI tools.
+                        </li>
+                        <li>
+                            Improve the model: The community can contribute to the model's development by identifying and fixing bugs, suggesting improvements, and sharing their insights. This collaborative approach accelerates progress and ensures that Stable Diffusion remains at the forefront of AI-generated image technology.
+                        </li>
+                        <li>
+                            Democratize access: Open-source makes Stable Diffusion accessible to everyone, regardless of their financial resources or technical expertise. This democratization empowers individuals and organizations to leverage AI for creative expression, research, and problem-solving.
+                        </li>
+                    </ul>
+                </div>
+                <!-- end of Stable Diffusion subsection -->
+            </div>
+            <!-- end of image_page_subsection_box -->
+        </section>
+    </main>
+    <footer class="bg-body-tertiary">
+        <p>&copy; 2024 Image Generation Webpage</p>
+    </footer>
+</body>
+</html>

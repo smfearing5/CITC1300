@@ -1,0 +1,241 @@
+/* Global / Mobile Styles */
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+a {
+    text-decoration: none;
+    margin: 1rem;
+    padding: 10px;
+    border-radius: 8px;
+}
+.nav-link {
+    width: fit-content;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+#navbarSupportedContent {
+    margin-bottom: 1rem;
+}
+
+#header_text p {
+    font-size: small;
+    text-align: center;
+}
+#header_text,
+main {
+    padding: 0;
+}
+h1 {
+    padding: 0.5rem;
+}
+h1, h2,
+h3, h4 {
+    text-align: center;
+}
+h3 {
+    padding: 1rem;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main section {
+    margin: 1rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.subsection {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+footer {
+    padding: 0.5rem;
+    text-align: center;
+}
+footer.p {
+    height: 100%;
+}
+
+#colorToggle {display: none;}
+.fa-sun {color: #f39c12;}
+.fa-moon {color: #f1c40f;}
+.checkbox {
+    opacity: 0;
+    position: absolute;
+    display: none !important;
+}
+.checkbox-label {
+    background-color: #111;
+    width: 50px;
+    height: 26px;
+    border-radius: 50px;
+    position: relative;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.checkbox-label .ball {
+    background-color: #fff;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+.checkbox:checked + .checkbox-label .ball {
+    transform: translateX(24px);
+}
+.carousel-item img {
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+    height: 400px;
+}
+/* Image Page */
+.flex_carousel {
+    display: flex;
+    justify-content: center;
+}
+.image_page_carousel {
+    max-width: 320px;
+}
+.image_page_carousel .carousel-item img {
+    height: 300px;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+}
+/* Music Page */
+.music_card {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-bottom: 1rem;
+}
+.music_card_img {
+    height: 300px;
+    width: min-content;
+    border-radius: 1rem;
+}
+.music_label {
+    text-align: center;
+}
+.music_title h4,
+.music_title p {
+    margin: 0;
+}
+.music_title p {
+    font-size: small;
+    font-style: italic;
+}
+/* Video Page */
+.video_card {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.video_frame {
+    position: relative;
+    width: 95%;
+    height: 0;
+    padding-bottom: 53.5%;
+}
+.video_frame iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.video_card a {
+    width: fit-content;
+}
+
+/* Tablet Styles */
+
+@media(min-width: 768px) {
+    /* Home Page */
+    .home_carousel_item img {
+        height: 600px;
+    }
+    /* Image Page */
+    .image_page_carousel {
+        max-width: 480px;
+    }
+    .image_page_carousel .carousel-item img {
+        height: 450px;
+    }
+    /* Music Page */
+    .music_card {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
+    }
+    .music_card_info {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+    }
+}
+
+/* Desktop Styles */
+
+@media (min-width: 992px) {
+    #navbarSupportedContent {
+        margin: 0;
+    }
+    #navbarSupportedContent ul {
+        width: 95%;
+        display: flex;
+        justify-content: space-around;
+    }
+}
+@media (min-width: 1024px) {
+    .small_section {
+        max-width: 60%;
+    }
+    /* Home Page */
+    .home_carousel_item img {
+        height: 800px;
+    }
+    #home_subsection_box {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+    /* Image Page */
+    #image_page_subsection_box {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        padding: 1rem;
+    }
+    /* Music Page */
+    .music_card {
+        float: right;
+        gap: 1rem;
+        padding: 1rem;
+        margin: 1rem;
+        border-radius: 1rem;
+        background-color: #999;
+    }
+    .music_card_img {
+        height: 240px;
+    }
+    /* Video Page */
+    .video_card {
+        float: right;
+        gap: 1rem;
+        padding: 2rem;
+        width: 50%;
+    }
+}

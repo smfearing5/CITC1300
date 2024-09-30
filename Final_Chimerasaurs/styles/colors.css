@@ -1,0 +1,97 @@
+/* Colors */
+header,
+nav,
+footer {
+    background-color: limegreen;
+}
+nav ul {
+    background-color: black;
+}
+nav li a {
+    background-color: limegreen;
+    color: black;
+}
+nav li a:hover {
+    background-color: white;
+}
+body {
+    background-color: black;
+}
+#home_main {
+    background-color: palegreen;
+}
+#bd_card,
+#bd_main {
+    background-color: burlywood;
+}
+#bd_col1,
+#bd_col2 {
+    background-color: skyblue;
+}
+#bs_card, #bs_main,
+#bs_col1, #bs_col2 {
+    background-color: rgb(245, 219, 149);
+}
+#sf_card, #sf_main,
+#sf_col1, #sf_col2 {
+    background-color: rgb(197, 176, 219);
+}
+#vc_card, 
+#vc_main {
+    background-color: rgb(124, 255, 255);
+}
+#rainforest_vc_card {
+    background-color: rgb(100, 200, 100);
+}
+#giant_vc_card {
+    background-color: rgb(75, 135, 75);
+}
+#swamp_vc_card {
+    background-color: rgb(170, 170, 100);
+}
+#coastal_vc_card {
+    background-color: rgb(220, 205, 170);
+}
+#deepsea_vc_card {
+    background-color: rgb(80, 135, 255);
+}
+a.blue_card:link {
+    color: orange;
+}
+a.blue_card:visited {
+    color: red;
+}
+
+/* Mobile Colors */
+
+@media (min-width: 320px) {
+    #bd_main {
+        background-color: skyblue;
+    }
+}
+
+/* Tablet Colors */
+
+@media (min-width: 768px) {
+    nav {
+        background-color: black;
+    }
+    #bd_main {
+        background-color: burlywood;
+    }
+    #bs_main,
+    #sf_main {
+        background-color: palegreen;
+    }
+}
+
+/* Desktop Colors */
+
+@media (min-width: 1024px) {
+    nav ul {
+        background-color: limegreen;
+    }
+    nav li a {
+        background-color: rgb(80, 225, 80);
+    }
+}
